@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Lato:wght@700&display=swap');
+body {
+    margin: 0 auto;
+    background-color: #9A1663;
+}
+
+.soon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.coming {
+    font-size: 100px;
+    font-family: 'Lato', sans-serif;
+}
+
+.coming:hover {
+    color: #FF97C1;
+    cursor: default;
+    transition: 2s;
+}
