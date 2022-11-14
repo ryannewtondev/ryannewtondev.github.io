@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Lato:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200'); 
+@import 'variables';
+
+html, body{
+    margin: 0;
+}
+
+.nav-section {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    .nav-bar {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        height: 5rem;
+        li, ul{
+            list-style: none;
+            font-size: 2rem;
+        }
+        a {
+            text-decoration: none;
+            color: antiquewhite;
+        }
+    }
+}
+
+#home_current {
+    border-bottom: 2px solid grey;
+}
+
+.main-wrapper {
+    @include flexCenter();
+    @include backgroundAnimate(); // Import animation from variable.scss
+    // background-color: white;
+    // gap: 1.5rem;
+    // min-height: 81vh;
+    .main-bg {
+        font-size: 1vw;
+        width: 25em;
+        text-align: center;
+        span{
+            color: #A66CFF;
+        }
+    }
+}
+
+@keyframes animate {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+// About Section start
+.about_img {
+    width: 200px;
+    height: 200px;
+    // background-image: url('');  << Profile Image goes here
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+// About Section End
+.skills_section {
+    background-color: #9C9EFE;
+    .skills_header {
+        text-align: center;
+        font-size: 2rem;
+    }
+    .skills_wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .skills_table {
+        
+    }
+}
+
+/* Footer Start */
+
+.footer_section {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    .footer_wrapper {
+        display: flex;
+        align-items: center;
+    }
+    .footer_links {
+        position: absolute;
+        right: 0;
+        bottom: 0.5rem;
+        .twitter, .linkedin, .github {
+            height: auto;
+            width: 30px;
+        }
+    }
+}
