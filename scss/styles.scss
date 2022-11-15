@@ -33,7 +33,6 @@ html, body{
 }
 
 .main-wrapper {
-    @include flexCenter();
     @include backgroundAnimate(); // Import animation from variable.scss
     // background-color: white;
     // gap: 1.5rem;
@@ -42,8 +41,18 @@ html, body{
         font-size: 1vw;
         width: 25em;
         text-align: center;
+        @include flexCenter(center, center, column);
+        flex-direction: column;
         span{
             color: #A66CFF;
+        }
+        .about_img {
+            width: 200px;
+            height: 200px;
+            // background-image: url('');  << Profile Image goes here
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
         }
     }
 }
@@ -61,13 +70,12 @@ html, body{
 }
 
 // About Section start
-.about_img {
-    width: 200px;
-    height: 200px;
-    // background-image: url('');  << Profile Image goes here
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
+.about_section{
+    @include flexCenter(center, center, row);
+    .about{
+        @include flexCenter(center, center, row);
+
+    }
 }
 // About Section End
 .skills_section {
@@ -82,8 +90,17 @@ html, body{
         justify-content: space-evenly;
         align-items: center;
     }
-    .skills_table {
-        
+    #skills_table {
+       @include flexCenter(space-evenly, center, row);
+        height: 500px;
+        width: 100px;
+    }
+    p {
+        text-align: center;
+    }
+    .fa-brands{
+        font-size: 100px;
+        margin: 20px;
     }
 }
 
@@ -101,9 +118,9 @@ html, body{
         position: absolute;
         right: 0;
         bottom: 0.5rem;
-        .twitter, .linkedin, .github {
-            height: auto;
-            width: 30px;
+        i{
+            font-size: 30px;
         }
+
     }
 }

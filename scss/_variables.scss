@@ -1,7 +1,8 @@
-@mixin flexCenter() {
+@mixin flexCenter($space_even, $align_center, $flex_direction) {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: $space_even;
+    align-items: $align_center;
+    flex-direction: $flex_direction;
 }
 
 @mixin backgroundAnimate() {
